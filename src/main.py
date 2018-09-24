@@ -12,6 +12,7 @@ rtes = Routes()
 @app.route(rtes.returnDiagnosticsUrl() + '/check', methods=['GET'])
 def heartbeat():
     try:
+        #TODO: refien result logic
         res = rtes.getVers()
         if res is not None:
             return res, 200
