@@ -13,7 +13,9 @@ rtes = Routes()
 def heartbeat():
     try:
         res = rtes.getVers()
-        return res, 200
+        if res is not None:
+            return res, 200
+        return {"message":"Error Processing Request"}, 500
     except:
         print('An error occured processing this request')
 
