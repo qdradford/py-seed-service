@@ -1,5 +1,5 @@
-#system imports
-import json
+#routes
+from router import Routes
 
 #flask imports
 from flask import request, url_for
@@ -7,13 +7,16 @@ from flask_api import FlaskAPI, status, exceptions
 
 app = FlaskAPI(__name__)
 
-base = '/api/'
-diagnosticBaseUrl = base + 'health/'
+rtes = Routes()
 
-@app.route(diagnosticBaseUrl + 'check', methods=['GET'])
+@app.route(rtes.returnDiagnosticsUrl() + '/check', methods=['GET'])
 def heartbeat():
     try:
-        return {"Name":"py-seed-service", "Version":"1.0.0"}
+        #TODO: refien result logic
+        res = rtes.getVers()
+        if res is not None:
+            return res, 200
+        return {"message":"Error Processing Request"}, 500
     except:
         print('An error occured processing this request')
 
