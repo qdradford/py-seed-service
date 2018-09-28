@@ -1,7 +1,9 @@
 from python:3
 
-ADD src/ src/
+ADD / src/
 
-RUN pip install -r requirements.txt
+RUN ls src/
 
-CMD ["python", "./src/main.py"]
+RUN pip install -r ./src/requirements.txt
+
+CMD ["python", "./src/src/main.py"]
