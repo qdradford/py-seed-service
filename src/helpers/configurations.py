@@ -9,3 +9,6 @@ class configurations():
 
     def getHealthUrl(self):
         return self.health
+    
+    
+        

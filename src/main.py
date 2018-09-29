@@ -1,19 +1,19 @@
-#routes
-from router import Routes
-
 #flask imports
 from flask import request, url_for
 from flask_api import FlaskAPI, status, exceptions
 
+from helpers.configurations import configurations
+from modules.healthmodule import healthmodule
+
 app = FlaskAPI(__name__)
 
-rtes = Routes()
+configs = configurations()
 
-@app.route(rtes.returnDiagnosticsUrl() + '/check', methods=['GET'])
+@app.route(configs.getHealthUrl() + '/check', methods=['GET'])
 def heartbeat():
     try:
         #TODO: refien result logic
-        res = rtes.getVers()
+        res = healthmodule().getVersion()
         if res is not None:
             return res, 200
         return {"message":"Error Processing Request"}, 500
