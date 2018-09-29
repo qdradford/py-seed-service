@@ -1,9 +1,10 @@
 from python:3
 
-ADD / src/
+COPY . src/
+WORKDIR src/
 
-RUN ls src/
+RUN ls
 
-RUN pip install -r ./src/requirements.txt
+RUN pip install -r requirements.txt
 
-CMD ["python", "./src/src/main.py"]
+CMD ["python", "./src/main.py"]
