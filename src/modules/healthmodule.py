@@ -11,7 +11,7 @@ class healthmodule():
     def __init__(self):
         self.configurations = configurations()
         self.diagnosticBaseUrl = self.configurations.getHealthUrl()
-        self.version_location = "version.json"
+        self.version_location = "../version.json"
         self.version_data = None
 
     def readVersion(self):
