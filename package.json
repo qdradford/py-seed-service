@@ -2,7 +2,7 @@
   "name": "py-seed-service",
   "version": "1.0.0",
   "description": "Python Service Base using Flask API",
-  "main": "index.js",
+  "main": "src/main.py",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "py src/main.py"
@@ -11,10 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/qdradford/py-seed-service.git"
   },
-  "author": "",
+  "author": "quenton radford",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/qdradford/py-seed-service/issues"
   },
-  "homepage": "https://github.com/qdradford/py-seed-service#readme"
+  "homepage": "http://quentonradford.tech"
 }
