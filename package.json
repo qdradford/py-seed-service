@@ -1,0 +1,20 @@
+{
+  "name": "py-seed-service",
+  "version": "1.0.0",
+  "description": "Python Service Base using Flask API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "py src/main.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qdradford/py-seed-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qdradford/py-seed-service/issues"
+  },
+  "homepage": "https://github.com/qdradford/py-seed-service#readme"
+}
