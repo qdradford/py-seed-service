@@ -8,5 +8,6 @@ Python Service Base using Flask API
 ---
 ## Run Application
 ```
-python main.py
+1.cd src/
+2.python main.py
 ```
